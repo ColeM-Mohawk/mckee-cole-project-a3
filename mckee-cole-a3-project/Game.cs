@@ -13,8 +13,6 @@ namespace MohawkGame2D
         // Place your variables here:
         Vector2 position;
 
-        float secondsElapsed = Time.SecondsElapsed;
-
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -22,8 +20,6 @@ namespace MohawkGame2D
         {
             Window.SetTitle("Holder");
             Window.SetSize(800, 600);
-
-
         }
 
         /// <summary>
@@ -33,15 +29,14 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(Color.OffWhite);
 
-
-            
-
-            position += Vector2.Zero * 100 * Time.DeltaTime;
+            Draw.FillColor = Color.Blue;
+            Draw.LineColor = Color.Black;
+            Draw.Square(0, 400, 800);
 
             Draw.FillColor = Color.Red;
             Draw.LineColor = Color.Black;
-            Draw.Square(100, 800, 80);
-           
+            Draw.Square(0, 320, 80);
+
         }
     }
 
